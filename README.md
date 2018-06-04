@@ -31,6 +31,8 @@ Ese comando descargará datos para que el tagger funcione, dentro de una carpeta
 - [Installing NLTK Data](https://www.nltk.org/data.html)
 - [What is NLTK POS tagger asking me to download?](https://stackoverflow.com/a/37651321)
 
+Una vez instalados los requisitos, simplmente es cuestión de descargar este repositorio y ejecutar los scripts como se explica acontinuación.
+
 **Nota**: Aunque los demos solo han sido probados en Ubuntu, se espera que funcionen en cualquier sistema operativo.
 
 # Textos de entrada
