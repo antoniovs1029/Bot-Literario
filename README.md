@@ -64,8 +64,9 @@ A continuación se explica lo que hace cada demo:
 
 Los tres demos terminan cuando el usuario oprime "Ctrl + C"
 
-A continuación se muestra un ejemplo del demo1, entrenado con el Primero Sueño de Sor Juana:
+A continuación se muestra un ejemplo del demo1, entrenado con el Primero Sueño de Sor Juana. El texto mostrado es el resultado de la interacción entre el bot y el usuario:
 ![Ejemplo de twitter](img/consola1.png?raw=true "El bot entrenado con El Primero Sueño de Sor Juana")
+
 (nótese que el texto de Primero Sueño es relativamente corto comparado a una novela, entonces no habrá mucha variabilidad en las contestaciones del bot)
 
 # Archivos generados
