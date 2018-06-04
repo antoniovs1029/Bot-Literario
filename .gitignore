@@ -1,0 +1,6 @@
+generados/
+user_logs/
+textos/*
+!textos/prueba_corta.txt
+!textos/lovecraft.txt
+!textos/suenio.txt
