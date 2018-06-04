@@ -7,12 +7,12 @@ En este repositorio también se presentan diferentes "demos" que muestran la ver
 En *tutorial.py* se encuentra una explicación paso a paso de cómo utilizar nuestros modulos para poder programar aún más variaciones que las presentadas en los demos. Sin embargo, para usar los demos no es necesario entender el *tutorial.py*, solo es necesario correr los scripts (seguir leyendo esta guía).
 
 - [Instalación](#Instalación)
-- [Textos de entrada](#Textos de entrada)
-- [Demos con los textos incluidos en el repo](#Demos con los textos incluidos en el repo)
-- [Archivos generados](# Archivos generados)
-- [Demos con textos del usuario](#Demos con textos del usuario)
-- [Logs de los usuarios](#Logs de los usuarios)
-- [Otras variaciones](#Otras variaciones)
+- [Textos de entrada](#Textos-de-entrada)
+- [Demos con los textos incluidos en el repo](#Demos-con-los-textos-incluidos-en-el-repo)
+- [Archivos generados](#Archivos-generados)
+- [Demos con textos del usuario](#Demos-con-textos-del-usuario)
+- [Logs de los usuarios](#Logs-de-los-usuarios)
+- [Otras variaciones](#Otras-variaciones)
 
 # Instalación
 Los programas están hechos con Python 3.5+. Entre los requerimientos se encuentra numpy y nltk, y sus respectivas dependencias.
