@@ -148,7 +148,7 @@ En general, el programa presentado en este repositorio es pensado como una herra
 # Twitter
 El archivo *twitter.py* muestra el código de cómo luciría un bot para twitter usando nuestras herramientas. Para poder correrlo, es necesario contar con el modulo tweepy, además de tener un archivo *twitter_keys.py* con las llaves dadas por la API de Twitter; para conseguir dichas llaves es necesario crear una cuenta en twitter y seguir los pasos descritos en [How to get API keys and tokens for Twitter?](https://www.slickremix.com/docs/how-to-get-api-keys-and-tokens-for-twitter/) 
 
-El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot que tiene por cuenta @Cortazar_Estoc. Este bot era capaz de mantener una interacción con el usuario a través de menciones en twitter, y fue entrenado con "Rayuela" de Cortazar:
+El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot que tiene por cuenta [@CortazarEstoc](https://twitter.com/CortazarEstoc/with_replies). Este bot era capaz de mantener una interacción con el usuario a través de menciones en twitter, y fue entrenado con "Rayuela" de Cortazar:
 
 ![Ejemplo de twitter](img/twitter1.png?raw=true "El bot entrenado con Rayuela de Cortazar")
 
