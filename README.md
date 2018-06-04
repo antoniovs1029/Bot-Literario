@@ -1,10 +1,10 @@
-Este es un repositorio con nuestro proyecto realizado para el Hackatón de *New Creativity 2018*, que tuvo como tema principal la creatividad literaria. El proyecto consistió en una especie de chatbot, que se entrena sobre algún texto (de preferencia algun texto literario notable, como una novela o un libro de poemas), e interactúa con el usuario para crear un texto orginal.
+Este es un repositorio con nuestro proyecto realizado para el Hackatón de *New Creativity 2018*, que tuvo como tema principal la creatividad literaria. El proyecto consistió en una especie de chatbot, que se entrena sobre algún texto (de preferencia algun texto literario notable, como una novela o un compendio de poemas), e interactúa con el usuario para crear un texto orginal.
 
 El entrenamiento del bot consiste en construir cadenas de markov a partir del texto original, una cadena captura la secuencia de palabras (utilizada para generar el texto), y otra cadena captura la secuencia de las estructuras gramaticales del autor. Una vez que interactúa con el usuario, el programa toma la última palabra del usuario, revisa su categoría gramatical, y propone una siguiente palabra que pertenezca al vocabulario del texto original, y cuya categoría gramatical sea coherente con la última ingresada por el usuario. Posteriormente, se usa esta palabra como semilla para que el bot genere una respuesta.
 
 En este repositorio también se presentan diferentes "demos" que muestran la versatilidad de nuestro programa. En *demo1.py* se ejemplifica el uso básico del chatbot. En *demo2.py* se presenta una variación donde el bot también va aprendiendo el lenguaje del usuario y lo va combinando con su entrenamiento previo con el texto. Y en *demo3.py* se muestra un caso donde se entrenan a dos bots, sobre dos textos distintos, y se ponen a conversar entre ellos, sin que haya interacción del usuario. También se incluirá un programa que permita lanzar al bot a twitter, y que interactuará con los usuarios a través de tweets.
 
-En *tutorial.py* se encuentra una explicación paso a paso de cómo utilizar nuestros modulos para poder programar aún más variaciones que las presentadas en los demos. Sin embargo, para usar los demos no es necesario entender el *tutorial.py*, solo es necesario correr los scripts (seguir leyendo esta guía).
+En *tutorial.py* se encuentra una explicación paso a paso de cómo utilizar nuestros modulos para poder programar aún más variaciones que las presentadas en los demos. Sin embargo, para usar los demos no es necesario entender el *tutorial.py*, solo es necesario correr los scripts (seguir leyendo esta guía para saber cómo ejecutar los demos).
 
 - [Instalación](#instalación)
 - [Textos de entrada](#textos-de-entrada)
@@ -31,10 +31,12 @@ Ese comando descargará datos para que el tagger funcione, dentro de una carpeta
 - [Installing NLTK Data](https://www.nltk.org/data.html)
 - [What is NLTK POS tagger asking me to download?](https://stackoverflow.com/a/37651321)
 
-# Textos de entrada
-Es necesario proveer un archivo de texto plano .txt para entrenar a un bot. Se prefiere un texto largo como una novela, o un compendio de poemas, para que el entrenamiento sea adecuado. Aunque se prefiere que el archivo de entrada tenga un párrafo por cada línea, separados por saltos de línea, se esperaría que funcionara con cualquier archivo de texto plano.
+**Nota**: Aunque los demos solo han sido probados en Ubuntu, se espera que funcionen en cualquier sistema operativo.
 
-Se recomienda poner a los archivos de texto dentro de la carpeta "textos" de este repositorio para mantener cierto orden, sin embargo no es obligatorio. El repositorio ya incluye unos archivos de texto: *suenio.txt* (que contiene el Primero Sueño de Sor Juana Inés de la Cruz) y *lovecraft.txt* (que contiene la novela The Dunwich Horror de H.P. Lovecraft) y *prueba_corta.txt* que tiene un texto genérico para hacer pruebas. Los tres están libres de derechos de autor.
+# Textos de entrada
+Es necesario proveer cuando menos de un archivo de texto plano con extensión ".txt" para entrenar a un bot. Se prefiere un texto largo como una novela, o un compendio de poemas, para que el entrenamiento sea adecuado. Aunque se prefiere que el archivo de entrada tenga un párrafo por cada línea, separados por saltos de línea, se esperaría que funcionara con cualquier archivo de texto plano.
+
+Se recomienda poner a los archivos de texto dentro de la carpeta "./textos/" de este repositorio para mantener cierto orden. El repositorio ya incluye unos archivos de texto dentro de dicha carpeta: *suenio.txt* (que contiene el Primero Sueño de Sor Juana Inés de la Cruz), *lovecraft.txt* (que contiene la novela The Dunwich Horror de H.P. Lovecraft) y *prueba_corta.txt* que tiene un texto genérico para hacer pruebas. Los tres están libres de derechos de autor.
 
 # Demos con los textos incluidos en el repo
 Los demos trabajan por default con los textos incluidos en el repositorio. Sin embargo, es necesario generar archivos intermedios utilizando dichos textos. Para ello, simplemente correr los siguientes tres comandos:
@@ -45,7 +47,7 @@ $ python3 texto_a_archivos.py lovecraft
 $ python3 texto_a_archivos.py prueba_corta
 ```
 
-Estos crean la carpeta "./generados/" y diversos archivos necesarios para que los bots funcionen con los textos mencionados. Más adelante se explican estos archivos generados.
+Estos crean la carpeta "./generados/" y dentro pone diversos archivos necesarios para que los bots funcionen con los textos mencionados. Más adelante se explican estos archivos generados.
 
 Una vez hecho lo anterior, se puede correr cualquiera de los tres demos usando:
 
@@ -67,7 +69,7 @@ Como se ha mencionado, es necesario generar archivos a partir de los textos para
 $ python3 texto_a_archivos.py nombre
 ```
 
-Donde "nombre" es el nombre del archivo "nombre.txt" que **debe** encontrarse en el directorio "./textos". Atención: al invocar el script NO se debe incluir la extensión ".txt" del archivo.
+Donde "nombre" es el nombre del archivo "nombre.txt" que **debe** encontrarse en el directorio "./textos/". Atención: al invocar el script NO se debe incluir la extensión ".txt" del archivo.
 
 En general, se pueden ignorar estos archivos, pues son para el funcionamiento interno del bot. Para aprender más sobre ellos, se podría revisar el *tutorial.py* o la documentación de los programas.
 
@@ -77,7 +79,7 @@ Para tener una breve idea de lo que son, a continuación se enlistan:
 * *nombre.markov-generador.pickle* - archivo binario que contiene la cadena de markov para generar texto
 * *nombre.markov-gramatical.pickle* - archivo binario que contiene la cadena de markov para escoger categorías gramaticales, creado con *nombre.txt*.
 
-La razón para tener estos archivos en disco, es para ahorrar tiempo de entrenamiento y para que se pueda acceder directamente a estos archivos y explorar en caso de falla.
+La razón para tener estos archivos en disco, es para ahorrarse el tiempo de entrenamiento cada vez que se inicie un bot, al cargar directamente la cadena. También permite que se pueda acceder directamente a estos archivos, de manera independiente, para inspeccionarlos en caso de falla.
 
 # Demos con textos del usuario
 Los scripts de los demos pueden trabajar con textos provistos por el mismo usuario.
@@ -111,7 +113,9 @@ $ python3 demo3.py nombre1 nombre2
 Para ver a el chat entre los bots entrenados con *nombre1.txt* y *nombre2.txt* respectivamente.
 
 **Nota**: Los nombres pasados como argumentos a los scripts no deben llevar la extensión ".txt".
+
 **Nota**: En caso de disponer de un nombre, cuyos archivos no se encuentren en *./generados/*, sucederán errores.
+
 **Nota**: En caso de no pasar un "nombre" como argumento, simplemente se usarán los archivos incluidos en el repositorio.
 
 # Logs de los usuarios
@@ -131,3 +135,5 @@ Algunas variaciones que se podrían programar usando este repositorio son:
 * En lugar de usar textos clásicos, se pueden entrenar a los bots con texto hechos por el propio usuario para capturar su lenguaje. También, de utilizarse durante mucho tiempo, se podrían usar los logs de los usuarios para entrenar bots.
 
 * Se pueden crear bots que interactúen con alguna página de internet, por ejemplo con twitter.
+
+En general, el programa presentado en este repositorio es pensado como una herramienta para el ejercicio creativo que permita al usuario divertirse, y explorar nuevas ideas, al enfrentarse con los textos automáticamente generados por el chatbot, los cuales no siempre son coherentes, pero que capturan, de algún modo, la escencia del autor utilizado en el entrenamiento del bot.
