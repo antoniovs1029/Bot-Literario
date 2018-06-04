@@ -1,5 +1,3 @@
-**Este Archivo README.md y el repositorio en general se encuentran en construcción**
-
 Este es un repositorio con nuestro proyecto realizado para el Hackatón de *New Creativity 2018*, que tuvo como tema principal la creatividad literaria. El proyecto consistió en una especie de chatbot, que se entrena sobre algún texto (de preferencia algun texto literario notable, como una novela o un libro de poemas), e interactúa con el usuario para crear un texto orginal.
 
 El entrenamiento del bot consiste en construir cadenas de markov a partir del texto original, una cadena captura la secuencia de palabras (utilizada para generar el texto), y otra cadena captura la secuencia de las estructuras gramaticales del autor. Una vez que interactúa con el usuario, el programa toma la última palabra del usuario, revisa su categoría gramatical, y propone una siguiente palabra que pertenezca al vocabulario del texto original, y cuya categoría gramatical sea coherente con la última ingresada por el usuario. Posteriormente, se usa esta palabra como semilla para que el bot genere una respuesta.
@@ -7,6 +5,14 @@ El entrenamiento del bot consiste en construir cadenas de markov a partir del te
 En este repositorio también se presentan diferentes "demos" que muestran la versatilidad de nuestro programa. En *demo1.py* se ejemplifica el uso básico del chatbot. En *demo2.py* se presenta una variación donde el bot también va aprendiendo el lenguaje del usuario y lo va combinando con su entrenamiento previo con el texto. Y en *demo3.py* se muestra un caso donde se entrenan a dos bots, sobre dos textos distintos, y se ponen a conversar entre ellos, sin que haya interacción del usuario. También se incluirá un programa que permita lanzar al bot a twitter, y que interactuará con los usuarios a través de tweets.
 
 En *tutorial.py* se encuentra una explicación paso a paso de cómo utilizar nuestros modulos para poder programar aún más variaciones que las presentadas en los demos. Sin embargo, para usar los demos no es necesario entender el *tutorial.py*, solo es necesario correr los scripts (seguir leyendo esta guía).
+
+- [Instalación](#Instalación)
+- [Textos de entrada](#Textos de entrada)
+- [Demos con los textos incluidos en el repo](#Demos con los textos incluidos en el repo)
+- [Archivos generados](# Archivos generados)
+- [Demos con textos del usuario](#Demos con textos del usuario)
+- [Logs de los usuarios](#Logs de los usuarios)
+- [Otras variaciones](#Otras variaciones)
 
 # Instalación
 Los programas están hechos con Python 3.5+. Entre los requerimientos se encuentra numpy y nltk, y sus respectivas dependencias.
