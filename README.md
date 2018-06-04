@@ -136,6 +136,15 @@ Algunas variaciones que se podrían programar usando este repositorio son:
 
 * En lugar de usar textos clásicos, se pueden entrenar a los bots con texto hechos por el propio usuario para capturar su lenguaje. También, de utilizarse durante mucho tiempo, se podrían usar los logs de los usuarios para entrenar bots.
 
-* Se pueden crear bots que interactúen con alguna página de internet, por ejemplo con twitter.
+* Se pueden crear bots que interactúen con usuarios a través de alguna página de internet, u otro medio. Por ejemplo, más adelante se muestra un ejemplo de cómo luciría hacer un bot para twitter usando nuestras herramientas.
 
 En general, el programa presentado en este repositorio es pensado como una herramienta para el ejercicio creativo que permita al usuario divertirse, y explorar nuevas ideas, al enfrentarse con los textos automáticamente generados por el chatbot, los cuales no siempre son coherentes, pero que capturan, de algún modo, la escencia del autor utilizado en el entrenamiento del bot.
+
+# Twitter
+El archivo *twitter.py* muestra el código de cómo luciría un bot para twitter usando nuestras herramientas. Para poder correrlo, es necesario contar con el modulo tweepy, además de tener un archivo *twitter_keys.py* con las llaves dadas por la API de Twitter; para conseguir dichas llaves es necesario crear una cuenta en twitter y seguir los pasos descritos en [How to get API keys and tokens for Twitter?](https://www.slickremix.com/docs/how-to-get-api-keys-and-tokens-for-twitter/) 
+
+El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot que tiene por cuenta @Cortazar_Estoc. Este bot era capaz de mantener una interacción con el usuario a través de menciones en twitter. Por ejemplo:
+
+![Ejemplo de twitter](imgs/twitter1.png?raw=true "El bot entrnado con Rayuela de Cortazar")
+
+Actualmente el bot se encuentra apagado.
