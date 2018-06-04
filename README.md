@@ -15,7 +15,21 @@ En *tutorial.py* se encuentra una explicación paso a paso de cómo utilizar nue
 - [Otras variaciones](#otras-variaciones)
 
 # Instalación
-Los programas están hechos con Python 3.5+. Entre los requerimientos se encuentra numpy y nltk, y sus respectivas dependencias.
+Los programas están hechos con Python 3.5+. Entre los requerimientos se encuentra numpy y nltk, y sus respectivas dependencias. Para instalar las dependencias utilizando el archivo *requierements.txt* en este repositorio, ejecutar el siguiente comando:
+
+```
+$ pip3 install -r requirements.txt
+```
+
+Se recomienda utilizar un entorno virtual. Además, para que nuestro programa pueda usar el pos-tagger de NLTK, es necesario descargar archivos propios de ese modulo. Simplemente ejecutar:
+
+```
+$ python3 -m nltk.downloader averaged_perceptron_tagger
+```
+
+Ese comando descargará datos para que el tagger funcione, dentro de una carpeta del sistema del usuario. Estos datos podrán servir a cualquier instalación de NLTK usada por el usuario, aún fuera del entorno virtual actual. Sin embargo, es posible especificar otra ruta de instalación. Para más información al respecto, referirse a los siguientes enlaces:
+- [Installing NLTK Data](https://www.nltk.org/data.html)
+- [What is NLTK POS tagger asking me to download?](https://stackoverflow.com/a/37651321)
 
 # Textos de entrada
 Es necesario proveer un archivo de texto plano .txt para entrenar a un bot. Se prefiere un texto largo como una novela, o un compendio de poemas, para que el entrenamiento sea adecuado. Aunque se prefiere que el archivo de entrada tenga un párrafo por cada línea, separados por saltos de línea, se esperaría que funcionara con cualquier archivo de texto plano.
