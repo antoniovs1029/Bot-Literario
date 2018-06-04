@@ -64,6 +64,10 @@ A continuación se explica lo que hace cada demo:
 
 Los tres demos terminan cuando el usuario oprime "Ctrl + C"
 
+A continuación se muestra un ejemplo del demo1, entrenado con el Primero Sueño de Sor Juana:
+![Ejemplo de twitter](img/consola1.png?raw=true "El bot entrenado con El Primero Sueño de Sor Juana")
+(nótese que el texto de Primero Sueño es relativamente corto comparado a una novela, entonces no habrá mucha variabilidad en las contestaciones del bot)
+
 # Archivos generados
 Como se ha mencionado, es necesario generar archivos a partir de los textos para que los bots funcionen. Para automatizar el proceso se ha creado el script *texto_a_archivos.py* ya mencionado. Dicho script recibe como argumento el nombre del texto y genera automáticamente los archivos relevantes en la carpeta *./generados/*. Su uso es el siguiente:
 
@@ -143,8 +147,8 @@ En general, el programa presentado en este repositorio es pensado como una herra
 # Twitter
 El archivo *twitter.py* muestra el código de cómo luciría un bot para twitter usando nuestras herramientas. Para poder correrlo, es necesario contar con el modulo tweepy, además de tener un archivo *twitter_keys.py* con las llaves dadas por la API de Twitter; para conseguir dichas llaves es necesario crear una cuenta en twitter y seguir los pasos descritos en [How to get API keys and tokens for Twitter?](https://www.slickremix.com/docs/how-to-get-api-keys-and-tokens-for-twitter/) 
 
-El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot que tiene por cuenta @Cortazar_Estoc. Este bot era capaz de mantener una interacción con el usuario a través de menciones en twitter. Por ejemplo:
+El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot que tiene por cuenta @Cortazar_Estoc. Este bot era capaz de mantener una interacción con el usuario a través de menciones en twitter, y fue entrenado con "Rayuela" de Cortazar:
 
-![Ejemplo de twitter](img/twitter1.png?raw=true "El bot entrnado con Rayuela de Cortazar")
+![Ejemplo de twitter](img/twitter1.png?raw=true "El bot entrenado con Rayuela de Cortazar")
 
 Actualmente el bot se encuentra apagado.
