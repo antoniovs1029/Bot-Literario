@@ -15,7 +15,7 @@ En *tutorial.py* se encuentra una explicación paso a paso de cómo utilizar nue
 - [Otras variaciones](#otras-variaciones)
 
 # Instalación
-Los programas están hechos con Python 3.5+. Entre los requerimientos se encuentra numpy y nltk, y sus respectivas dependencias. Para instalar las dependencias utilizando el archivo *requierements.txt* en este repositorio, ejecutar el siguiente comando:
+Los programas están hechos con Python 3.5+. Entre los requerimientos se encuentra numpy y nltk, y sus respectivas dependencias. Además, para hacer un bot con twitter se deberá instalar tweepy. Para instalar las dependencias utilizando el archivo *requierements.txt* en este repositorio, ejecutar el siguiente comando:
 
 ```
 $ pip3 install -r requirements.txt
