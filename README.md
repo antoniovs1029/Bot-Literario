@@ -145,6 +145,6 @@ El archivo *twitter.py* muestra el código de cómo luciría un bot para twitter
 
 El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot que tiene por cuenta @Cortazar_Estoc. Este bot era capaz de mantener una interacción con el usuario a través de menciones en twitter. Por ejemplo:
 
-![Ejemplo de twitter](imgs/twitter1.png?raw=true "El bot entrnado con Rayuela de Cortazar")
+![Ejemplo de twitter](img/twitter1.png?raw=true "El bot entrnado con Rayuela de Cortazar")
 
 Actualmente el bot se encuentra apagado.
