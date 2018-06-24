@@ -79,8 +79,7 @@ class listener(StreamListener):
         return True
 
 
-auth = OAuthHandler(ConsumerKey, ConsumerSecret)
-auth.set_access_token(AccessToken, AccessTokenSecret)
+
 #ment = API(auth)
 #mentions = ment.mentions_timeline()
 #mentions = json.loads(mentions)
@@ -88,7 +87,9 @@ auth.set_access_token(AccessToken, AccessTokenSecret)
 #print(mentions[0].text)
 print("Se iniciara el stream")
 while True:
+    auth = OAuthHandler(ConsumerKey, ConsumerSecret)
+    auth.set_access_token(AccessToken, AccessTokenSecret)
     # Para iniciar de nuevo el streaming en caso de algún error
     twitterStream = Stream(auth, listener())
     #twitterStream.filter(track=["@CEstocastico", "@cestocastico"])
-    twitterStream.filter(track=["@CortazarEstoc", "cortazarestoc"])
+    twitterStream.filter(track=["@CortazarEstoc", "@cortazarestoc"])
