@@ -154,3 +154,9 @@ El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot q
 ![Ejemplo de twitter](img/twitter1.png?raw=true "El bot entrenado con Rayuela de Cortazar")
 
 Actualmente el bot se encuentra apagado.
+
+# Creadores
+Luis Ricardo Vallejo Guiterrez
+Diego Armando Miguel Cardoso
+José Luis Olivares Castillo (@jolivaresc)
+José Antonio Velázuqez (@antoniovs1029)
