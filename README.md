@@ -156,7 +156,7 @@ El código de *twitter.py* fue utilizado con nuestras propias llaves en el bot q
 Actualmente el bot se encuentra apagado.
 
 # Creadores
-Luis Ricardo Vallejo Guiterrez
-Diego Armando Miguel Cardoso
-José Luis Olivares Castillo (@jolivaresc)
-José Antonio Velázuqez (@antoniovs1029)
+- Luis Ricardo Vallejo Guiterrez
+- Diego Armando Miguel Cardoso
+- José Luis Olivares Castillo (@jolivaresc)
+- José Antonio Velázuqez (@antoniovs1029)
